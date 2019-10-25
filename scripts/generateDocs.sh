@@ -12,4 +12,3 @@ virtualenv "./$BASE_DIR/venv"
 ./"$BASE_DIR"/venv/bin/pip install -r "$BASE_DIR/doc/requirements.txt"
 ./"$BASE_DIR"/venv/bin/sphinx-build "$BASE_DIR/doc/source/" "$BASE_DIR/doc/build/" -b html -a -D html_add_permalinks=
 sbt doc-generator/run "$VERSION" "$PWD/$BASE_DIR"
-#rm -rf "$BASE_DIR"
