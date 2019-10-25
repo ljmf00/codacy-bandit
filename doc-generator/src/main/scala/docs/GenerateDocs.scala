@@ -16,11 +16,14 @@ object GenerateDocs {
   * for codacy.
   *
   */
-  def run(version: String, banditBaseDir: String): Unit = {
+  def main(args: Array[String]): Unit = {
+    val version = args(0)
+    val banditBaseDir = args(1)
+
     val banditDocsDirectory = banditBaseDir / "doc" / "build"
     if (banditDocsDirectory.notExists) {
       println(
-        "ERROR: Expected generated docs in " + banditDocsDirectory + "but found nothing. Please generate the docs.")
+        "ERROR: Expected generated docs in " + banditDocsDirectory + " but found nothing. Please generate the docs.")
       sys.exit(255)
     }
     val pPatterns = PluginsDocTransformer.getPatterns(banditDocsDirectory)
