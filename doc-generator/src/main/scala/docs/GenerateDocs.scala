@@ -6,7 +6,7 @@ import docs.transformers._
 import docs.model._
 
 object GenerateDocs {
-  val docsRoot = "src" / "main" / "resources" / "docs"
+  val docsRoot = ".." / "src" / "main" / "resources" / "docs"
   val descriptionsRoot = docsRoot / "description"
   val descriptionsJsonFile = docsRoot / "description" / "description.json"
   val patternsJsonFile = docsRoot / "patterns.json"
